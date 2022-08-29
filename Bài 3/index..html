@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    function checkString2in1(arr1, arr2) {
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr2 == arr1[i]) {
+                return true;
+            }
+        } return false
+    }
+    let firstSt = prompt("string 1").split(' ');
+    // vd : quả táo
+    let secondSt = prompt("string 2").split(' ');
+    //vd : táo
+    console.log(checkString2in1(firstSt, secondSt));
+</script>
+</body>
+</html>

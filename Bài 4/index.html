@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<canvas id="myCanvas" style="width: 1000px; height: 800px"></canvas>
+<script>
+    class Rectangle {
+        constructor(x, y, w, h, c) {
+            this.x = x;
+            this.y = y;
+            this.h = h;
+            this.w = w;
+            this.color = c;
+        }
+        display() {
+            let ctx = document.getElementById('myCanvas').getContext('2d');
+            let color = this.color;
+            ctx.beginPath();
+            ctx.fillRect(this.x, this.y, this.w, this.h);
+            ctx.fillStyle = color;
+            ctx.fill();
+            ctx.closePath();
+        }
+    }
+    let Rectangle1 = new Rectangle(10, 10, 200, 100, "#000000");
+    Rectangle1.display();
+</script>
+</body>
+</html>
